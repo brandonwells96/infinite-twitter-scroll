@@ -31,14 +31,18 @@ $(document).ready( function(){
         if(data.results.length > 0){
             $('#tweets').html('<h3>Your search results for: <strong>'+queryd+'</strong></h3>');
           $(data.results).each(function(i, data) {
-            $('#tweets').append('<article>'+'<p><strong><a class="tweet-user" target="_blank" href="http://twitter.com/'+data.from_user+'">'+data.from_user+'</a></strong></p><p>'+data.text+'</p>'+'</article>');
+            //pass our variables to add function
+            addTweets(data.text, data.from_user, data.profile_image_url);
           });
           } else {
             $('#tweets').append('<h3>Sorry No Results Found for: <strong>'+queryd+'</strong></h3>');
           }
-          //console.log(data);
+          console.log(data);
           $('#main article:nth-child(even)').addClass('even');
        });
+    }
 
+    function addTweets(text, user, avatar){
+        $('#tweets').append('<article><a class="username" target="_blank" href="http://twitter.com/'+user+'">'+user+'</a><aside><p><strong><a class="avatar" target="_blank" href="http://twitter.com/'+user+'"><img src="'+avatar+'"/></a></strong></p></aside><aside><p>'+text+'</p>'+'</aside></article>');
     }
 });//doc ready

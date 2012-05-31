@@ -55,8 +55,9 @@ a:hover {
     background: #fff;
     padding: 40px 20px;
 }
-#main header{
-
+#main #tweets{
+    width: 450px;
+    margin: 0 auto;
 }
 #main header h2{
     font:normal bold 32px/30px arial, sanserif;
@@ -74,7 +75,18 @@ a:hover {
     margin: 15px;
     padding: 15px;
 }
-
+#main article aside{
+    display: table-cell;
+    vertical-align: top;
+}
+#main article aside a.avatar{
+    display: block;
+    margin: 0 10px 0 0;
+}
+#main article a.username{
+    margin: 0 0 10px;
+    display: block;
+}
 #main article.even{
     background: #eee;
 }
