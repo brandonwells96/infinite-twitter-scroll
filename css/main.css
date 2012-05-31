@@ -49,17 +49,32 @@ a:hover {
 
 #main {
     display: block;
-    width: 940px;
-    margin:0 auto;
+    width: 740px;
+    margin:40px auto;
     position:relative;
     background: #fff;
-    padding: 20px;
+    padding: 40px 20px;
+}
+#main header{
+
+}
+#main header h2{
+    font:normal bold 32px/30px arial, sanserif;
+    color: #333;
+    text-align: center;
+    margin: 0 0 20px;
+}
+#main header nav{
+    text-align: center;
+}
+#main header nav input{
+    padding: 0 5px;
 }
 #main article{
-    margin: 10px 0;
-    padding: 10px;
+    margin: 15px;
+    padding: 15px;
 }
 
-#main article:nth-child(odd){
-background: #eee;
+#main article.even{
+    background: #eee;
 }
