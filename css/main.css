@@ -49,8 +49,12 @@ a:hover {
 
 #main {
     display: block;
-    width: 980px;
+    width: 940px;
     margin:0 auto;
     position:relative;
     background: #fff;
+    padding: 20px;
+}
+#main article{
+    margin: 10px 0;
 }
