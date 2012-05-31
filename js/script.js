@@ -13,7 +13,8 @@ $(document).ready( function(){
              
        $.getJSON(url,function(data) {
           $(data.results).each(function(i, data) {
-            $('#tweets').append('<article>'+'<p>'+data.text+'</p>'+'</article>');
+
+            $('#tweets').append('<article>'+'<p><strong><a class="tweet-user" target="_blank" href="http://twitter.com/'+data.from_user+'">'+data.from_user+'</a></strong></p><p>'+data.text+'</p>'+'</article>');
           });
           //console.log(data);
        });
