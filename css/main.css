@@ -58,9 +58,27 @@ a:hover {
 #main #tweets{
     width: 450px;
     margin: 0 auto;
+    height: 300px;
+    overflow-y: scroll;
+    position: relative;
+}
+#main #overlay{
+    position: absolute;
+left: 144px;
+width: 470px;
+background: url(../img/overlay_bg.png);
+display: none;
+height: 302px;
+z-index: 99;
+margin: 0 auto;
+}
+#main #tweets h3{
+    margin: 15px 0;
+    display: block;
 }
 #main header h2{
-    font:normal bold 32px/30px arial, sanserif;
+    font-size: 30px;
+    font-weight: bold;
     color: #333;
     text-align: center;
     margin: 0 0 20px;
@@ -72,7 +90,7 @@ a:hover {
     padding: 0 5px;
 }
 #main article{
-    margin: 15px;
+    margin: 5px 15px;
     padding: 15px;
 }
 #main article aside{
@@ -83,9 +101,14 @@ a:hover {
     display: block;
     margin: 0 10px 0 0;
 }
-#main article a.username{
+#main article p.usermeta{
     margin: 0 0 10px;
     display: block;
+}
+#main article p.usermeta em{
+    display: block;
+    font-size: 10px;
+    font-style: italic;
 }
 #main article.even{
     background: #eee;
