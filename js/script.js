@@ -1,7 +1,6 @@
 $(function () {
     //define globals
     var perPage = 10,
-        // How many posts per page set
         pageNum = 1,
         ajaxready = 1,
         max_id,
@@ -18,7 +17,7 @@ $(function () {
     }
 
     // Pull in the Tweets from Twitter!
-    function Tweets(pageNum) {
+    function getTweets(pageNum) {
         ajaxready = 0; //We aren't ready to ajax again until the current fetch is done
         if (pageNum === 1) { //if its the first time run the normal data fetch
             url = "http://search.twitter.com/search.json?q=" + query + "&rpp=" + perPage + "&page=" + pageNum + "&callback=?";
@@ -56,7 +55,7 @@ $(function () {
             if (ajaxready === 0 || ($('#nomore').length)) {
                 return;
             } //fail out if already loading in content or we've already said theres no more results, stops multiple calls
-            Tweets(pageNum);
+            getTweets(pageNum);
             $overlay.fadeIn();
             //console.log(pageNum);
         }
@@ -70,11 +69,11 @@ $(function () {
         //decode query so it's readable for our output
         queryd = decodeURIComponent(query);
         //empty the tweets box to prepare for new search, leave room for header
-        $tweetbox.html('<header></header>');
+        $tweetbox.fadeIn().html('<header></header>');
         //console.log(query);
         //start off the search at page one
         pageNum = 1;
-        Tweets(1);
+        getTweets(1);
     });
     //if user presses enter, trigger our search button!
     $('input#twit_search').keypress(function (e) {

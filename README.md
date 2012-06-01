@@ -18,4 +18,17 @@
 	1)pass url encoded search box input to twitter api
 	2)return results limited by 'rpp' to return only ten results at a time
 	3)if scrolled to bottom of results section display next results
+
+
+
+	Problems encountered (and how solved):
+	
+	Problem: Multiple Scroll events fired while scrolling 
+	Solution: added an if statement to check if the last ajax request was done yet, if not exit, else allow event to fire
+	
+	Problem: Twitter Api kept pulling repeated tweets 
+	Solution: changed the get url after the first request to include a max_id variable saying get results that are greater than the last sets id
+
+
+
  ===================================================================================*/

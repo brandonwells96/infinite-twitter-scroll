@@ -45,7 +45,18 @@ a, a:visited {
 a:hover {
     color: #0080A6;
 }
+/***  Font-face ***/
+@font-face {
+    font-family: 'CodaHeavy';
+    src: url('Coda-Heavy-webfont.eot');
+    src: url('Coda-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Coda-Heavy-webfont.woff') format('woff'),
+         url('Coda-Heavy-webfont.ttf') format('truetype'),
+         url('Coda-Heavy-webfont.svg#CodaHeavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 /***  Layout  ***/
 
@@ -54,8 +65,13 @@ a:hover {
     width: 740px;
     margin: 40px auto;
     position: relative;
-    background: #fff;
+    background: url(../img/twitter_bird1.jpg) no-repeat 20px 5px #fff;
     padding: 40px 20px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;   
+    -webkit-box-shadow:  -3px 3px 3px 5px rgba(0, 0, 0, .2);
+    box-shadow:  -3px 3px 3px 5px rgba(0, 0, 0, .2);
+        
 }
 
 #main #tweets {
@@ -64,6 +80,7 @@ a:hover {
     height: 300px;
     overflow-y: auto;
     position: relative;
+    display: none;
 }
 
 #main #overlay {
@@ -89,12 +106,26 @@ a:hover {
     display: block;
 }
 
+#main #tweets h3#nomore{
+    margin: 15px;
+}
+
 #main header h2 {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 35px;
+    font-family: 'CodaHeavy';
     color: #333;
     text-align: center;
-    margin: 0 0 20px;
+    margin: 0;
+}
+
+#main header p{
+    text-align: center;
+    margin: 5px 0 25px;
+}
+
+#main header p small{
+    display: block;
+    text-align: center;
 }
 
 #main header nav {
@@ -103,6 +134,10 @@ a:hover {
 
 #main header nav input {
     padding: 0 5px;
+}
+
+#main header nav button{
+    padding: 3px;
 }
 
 #main article {
@@ -135,4 +170,31 @@ a:hover {
 
 #main article.even {
     background: #eee;
+}
+
+
+/* Iphone Css */
+@media screen and (max-device-width: 480px){
+/*--- iPhone only CSS here ---*/
+  #main{
+    width: 300px;
+    background-position: 0 0;
+    margin: 20px auto;
+  }
+  #main #overlay {
+    left: 20px;
+    width: 305px;
+  }
+  #main article {
+    width: 290px;
+    margin: 5px 0;
+    position: relative;
+    left: -15px;
+  }
+  #main header h2 {
+    font-size: 14px;
+  }
+  #main header p{
+    font-size: 10px;
+  }
 }
