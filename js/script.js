@@ -1,5 +1,5 @@
 $(function () {
-    //define globals
+    //define global variables
     var perPage = 10,
         pageNum = 1,
         ajaxready = 1,
@@ -18,7 +18,7 @@ $(function () {
 
     // Pull in the Tweets from Twitter!
     function getTweets(pageNum) {
-        ajaxready = 0; //We aren't ready to ajax again until the current fetch is done
+        ajaxready = 0; //We aren't ready to scroll again until the current fetch is done
         if (pageNum === 1) { //if its the first time run the normal data fetch
             url = "http://search.twitter.com/search.json?q=" + query + "&rpp=" + perPage + "&page=" + pageNum + "&callback=?";
         } else { //if its not the first time use the max_id variable to make sure to get fresh posts not repeats
@@ -36,7 +36,7 @@ $(function () {
             } else {
                 $tweetbox.append('<h3 id="nomore">Sorry, there are no further results for: <strong>&ldquo;' + queryd + '&rdquo;</strong></h3>');
             }
-            $('#main article:nth-child(even)').addClass('even'); //ie compatible styling classes
+            $('#main article:nth-child(even)').addClass('even'); //ie compatible styling classes for even rows
 
             //fade out the overlay once results are loaded
             $overlay.fadeOut(function () {
@@ -58,7 +58,7 @@ $(function () {
         }
     });
 
-    //on click lets do it!
+    //on click of "go" button lets do it!
     $('#run_search').click(function () {
         query = $('#twit_search').val();
         //encode query in case of hash tags in query
