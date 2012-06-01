@@ -112,7 +112,7 @@ a:hover {
 
 #main header h2 {
     font-size: 35px;
-    font-family: 'CodaHeavy';
+    font-family: 'CodaHeavy', Arial, Helvetica, sans-serif;
     color: #333;
     text-align: center;
     margin: 0;
