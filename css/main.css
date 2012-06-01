@@ -141,7 +141,7 @@ a:hover {
 }
 
 #main article {
-    margin: 5px 15px;
+    margin: 5px 10px;
     padding: 15px;
     width: 380px;
     overflow: hidden;
@@ -172,6 +172,13 @@ a:hover {
     background: #eee;
 }
 
+.lt-ie8 #main{
+    top: 40px;
+}
+.lt-ie8 #main header nav button{
+    padding: 0;
+    margin: 1px 0 0;
+}
 
 /* Iphone Css */
 @media screen and (max-device-width: 480px){
