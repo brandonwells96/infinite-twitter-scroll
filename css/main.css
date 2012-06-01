@@ -3,16 +3,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, 
 small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,textarea,
 table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0; padding: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; 
-    font-family: inherit; vertical-align: baseline; text-align: left;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-align: left;
 }
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
-body, html{
+body, html {
     height: 100%;
 }
 
@@ -26,23 +33,18 @@ p, li, td {
     font-size: 12px;
 }
 
-img { border: 0;}
+img {
+    border: 0;
+}
 
 a, a:visited {
-    color: #0094C2; 
-    text-decoration: none; 
+    color: #0094C2;
+    text-decoration: none;
 }
 
-a:hover { 
+a:hover {
     color: #0080A6;
 }
-
-/*** Clearfix ***/
-.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.clearfix { display: inline-block; }
-* html .clearfix { height: 1%; } /* Hides from IE-mac \*/
-.clearfix { display: block; }
-.clear { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 
 /***  Layout  ***/
@@ -50,19 +52,21 @@ a:hover {
 #main {
     display: block;
     width: 740px;
-    margin:40px auto;
-    position:relative;
+    margin: 40px auto;
+    position: relative;
     background: #fff;
     padding: 40px 20px;
 }
-#main #tweets{
+
+#main #tweets {
     width: 450px;
     margin: 0 auto;
     height: 300px;
     overflow-y: auto;
     position: relative;
 }
-#main #overlay{
+
+#main #overlay {
     position: absolute;
     left: 175px;
     width: 440px;
@@ -73,49 +77,62 @@ a:hover {
     margin: 0 auto;
     text-align: center;
 }
-#main #overlay img{
+
+#main #overlay img {
     position: relative;
     top: 130px;
     width: 20px;
 }
-#main #tweets h3{
+
+#main #tweets h3 {
     margin: 15px 0;
     display: block;
 }
-#main header h2{
+
+#main header h2 {
     font-size: 30px;
     font-weight: bold;
     color: #333;
     text-align: center;
     margin: 0 0 20px;
 }
-#main header nav{
+
+#main header nav {
     text-align: center;
 }
-#main header nav input{
+
+#main header nav input {
     padding: 0 5px;
 }
-#main article{
+
+#main article {
     margin: 5px 15px;
     padding: 15px;
+    width: 380px;
+    overflow: hidden;
 }
-#main article aside{
+
+#main article aside {
     display: table-cell;
     vertical-align: top;
 }
-#main article aside a.avatar{
+
+#main article aside a.avatar {
     display: block;
     margin: 0 10px 0 0;
 }
-#main article p.usermeta{
+
+#main article p.usermeta {
     margin: 0 0 10px;
     display: block;
 }
-#main article p.usermeta em{
+
+#main article p.usermeta em {
     display: block;
     font-size: 10px;
     font-style: italic;
 }
-#main article.even{
+
+#main article.even {
     background: #eee;
 }
