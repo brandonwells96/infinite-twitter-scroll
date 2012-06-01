@@ -24,7 +24,6 @@ $(function () {
         } else { //if its not the first time use the max_id variable to make sure to get fresh posts not repeats
             url = "http://search.twitter.com/search.json?q=" + query + "&rpp=" + perPage + "&result_type=mixed&page=" + pageNum + "&since_id=" + max_id + "&callback=?";
         }
-        //console.log(url);
         $.getJSON(url, function (data) {
             if (data.results.length > 0) { //if we have results
                 //set our max_id to the current max_id for new set
@@ -37,7 +36,6 @@ $(function () {
             } else {
                 $tweetbox.append('<h3 id="nomore">Sorry, there are no further results for: <strong>&ldquo;' + queryd + '&rdquo;</strong></h3>');
             }
-            //console.log(data);
             $('#main article:nth-child(even)').addClass('even'); //ie compatible styling classes
 
             //fade out the overlay once results are loaded
@@ -57,7 +55,6 @@ $(function () {
             } //fail out if already loading in content or we've already said theres no more results, stops multiple calls
             getTweets(pageNum);
             $overlay.fadeIn();
-            //console.log(pageNum);
         }
     });
 
@@ -70,7 +67,6 @@ $(function () {
         queryd = decodeURIComponent(query);
         //empty the tweets box to prepare for new search, leave room for header
         $tweetbox.fadeIn().html('<header></header>');
-        //console.log(query);
         //start off the search at page one
         pageNum = 1;
         getTweets(1);
