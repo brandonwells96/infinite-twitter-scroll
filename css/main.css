@@ -59,18 +59,24 @@ a:hover {
     width: 450px;
     margin: 0 auto;
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: relative;
 }
 #main #overlay{
     position: absolute;
-left: 144px;
-width: 470px;
-background: url(../img/overlay_bg.png);
-display: none;
-height: 302px;
-z-index: 99;
-margin: 0 auto;
+    left: 175px;
+    width: 440px;
+    background: url(../img/overlay_bg.png);
+    display: none;
+    height: 302px;
+    z-index: 99;
+    margin: 0 auto;
+    text-align: center;
+}
+#main #overlay img{
+    position: relative;
+    top: 130px;
+    width: 20px;
 }
 #main #tweets h3{
     margin: 15px 0;
